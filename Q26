@@ -1,0 +1,19 @@
+
+class Solution:
+    def removeDuplicates(self, nums):
+        c = 0
+        for i in range(len(nums)):
+            if i < len(nums)-1 and nums[i] == nums[i+1]:
+                continue
+            else:
+                nums[c] = nums[i]
+                c += 1
+        return c
+
+
+nums = [1,1,2]
+s = Solution()
+print(s.removeDuplicates(nums))
+
+nums = [0,0,1,1,1,2,2,3,3,4]
+print(s.removeDuplicates(nums))        
